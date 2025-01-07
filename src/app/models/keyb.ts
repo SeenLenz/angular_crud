@@ -5,6 +5,7 @@ export interface Keycap {
   }
   
   export interface Keyboard {
+    id: string;
     name: string;
     switchType: string;
     caseType: string;

@@ -1,74 +1,79 @@
 {
-"keyboards": [
-{
-    "name": "Ducky One 2 Mini",
-    "switchType": "Cherry MX Speed Silver",
-    "caseType": "Plastic",
-    "pcbType": "Standard",
-    "keyboardType": "60%",
-    "ergonomic": false,
-    "keycaps": {
-      "brand": "Ducky",
-      "material": "PBT",
-      "process": "Double-shot"
+  "keyboards": [
+    {
+      "name": "Ducky One 2 Mini 2",
+      "switchType": "Cherry MX Speed Silver",
+      "caseType": "Plastic",
+      "pcbType": "Standard",
+      "keyboardType": "60%",
+      "ergonomic": false,
+      "keycaps": {
+        "brand": "Ducky",
+        "material": "PBT",
+        "process": "Double-shot"
+      },
+      "backlight": "RGB",
+      "id": "7ace"
     },
-    "backlight": "RGB"
-  },
-  {
-    "name": "Keychron K2",
-    "switchType": "Gateron Brown",
-    "caseType": "Aluminum",
-    "pcbType": "Hot-swappable",
-    "keyboardType": "75%",
-    "ergonomic": false,
-    "keycaps": {
-      "brand": "Keychron",
-      "material": "ABS",
-      "process": "Laser engraved"
+    {
+      "name": "Keychron K2",
+      "switchType": "Gateron Brown",
+      "caseType": "Aluminum",
+      "pcbType": "Hot-swappable",
+      "keyboardType": "75%",
+      "ergonomic": false,
+      "keycaps": {
+        "brand": "Keychron",
+        "material": "ABS",
+        "process": "Laser engraved"
+      },
+      "backlight": "White",
+      "id": "8de5"
     },
-    "backlight": "White"
-  },
-  {
-    "name": "Drop ALT",
-    "switchType": "Halo Clear",
-    "caseType": "Aluminum",
-    "pcbType": "Hot-swappable",
-    "keyboardType": "65%",
-    "ergonomic": true,
-    "keycaps": {
-      "brand": "MT3",
-      "material": "PBT",
-      "process": "Double-shot"
+    {
+      "name": "Drop ALT",
+      "switchType": "Halo Clear",
+      "caseType": "Aluminum",
+      "pcbType": "Hot-swappable",
+      "keyboardType": "65%",
+      "ergonomic": true,
+      "keycaps": {
+        "brand": "MT3",
+        "material": "PBT",
+        "process": "Double-shot"
+      },
+      "backlight": "RGB",
+      "id": "7627"
     },
-    "backlight": "RGB"
-  },
-  {
-    "name": "HHKB Professional Classic",
-    "switchType": "Topre",
-    "caseType": "Plastic",
-    "pcbType": "Standard",
-    "keyboardType": "60%",
-    "ergonomic": true,
-    "keycaps": {
-      "brand": "Topre",
-      "material": "PBT",
-      "process": "Dye-sublimation"
+    {
+      "name": "HHKB Professional Classic",
+      "switchType": "Topre",
+      "caseType": "Plastic",
+      "pcbType": "Standard",
+      "keyboardType": "60%",
+      "ergonomic": true,
+      "keycaps": {
+        "brand": "Topre",
+        "material": "PBT",
+        "process": "Dye-sublimation"
+      },
+      "backlight": "None",
+      "id": "df2c"
     },
-    "backlight": "None"
-  },
-  {
-    "name": "Anne Pro 2",
-    "switchType": "Kailh Box Red",
-    "caseType": "Plastic",
-    "pcbType": "Bluetooth",
-    "keyboardType": "60%",
-    "ergonomic": false,
-    "keycaps": {
-      "brand": "Obinskit",
-      "material": "PBT",
-      "process": "Double-shot"
-    },
-    "backlight": "RGB"
-  }
-]
+    {
+      "name": "Anne Pro 2",
+      "switchType": "Kailh Box Red",
+      "caseType": "Plastic",
+      "pcbType": "Bluetooth",
+      "keyboardType": "60%",
+      "ergonomic": false,
+      "keycaps": {
+        "brand": "Obinskit",
+        "material": "PBT",
+        "process": "Double-shot"
+      },
+      "backlight": "RGB",
+      "id": "8b87"
+    }
+  ]
 }

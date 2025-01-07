@@ -5,8 +5,8 @@ import { Keyboard } from '../models/keyb';
   selector: 'app-keyboard',
   standalone: true,
   imports: [],
-  templateUrl: './keyboard.component.html',
-  styleUrl: './keyboard.component.css',
+  templateUrl: './keyb.component.html',
+  styleUrl: './keyb.component.scss',
 })
 export class KeybComponent {
   @Input() model: Keyboard | undefined = undefined;

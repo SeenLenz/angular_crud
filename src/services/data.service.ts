@@ -21,10 +21,10 @@ export class DataService {
 
   modifyKeyboard(keyboard: Keyboard): Observable<Keyboard> {
     console.log(keyboard);
-    return this.http.put<Keyboard>(`${this.url}/${keyboard.name}`, keyboard); // Using 'name' as unique identifier
+    return this.http.put<Keyboard>(`${this.url}/${keyboard.id}`, keyboard); // Using 'name' as unique identifier
   }
 
   deleteKeyboard(keyboard: Keyboard): Observable<void> {
-    return this.http.delete<void>(`${this.url}/${keyboard.name}`); // Using 'name' as unique identifier
+    return this.http.delete<void>(`${this.url}/${keyboard.id}`); // Using 'name' as unique identifier
   }
 }

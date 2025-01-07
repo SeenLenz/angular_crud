@@ -3,13 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { Keyboard } from './models/keyb';
 import { DataService } from '../services/data.service';
 import { KeybComponent } from "./keyb/keyb.component";
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, KeybComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   keyboards: Keyboard[] = [];
@@ -31,6 +32,7 @@ export class AppComponent {
 
   newKeyboard() {
     this.new = {
+      id: uuidv4(),
       name: '',
       switchType: '',
       caseType: '',
@@ -65,7 +67,7 @@ export class AppComponent {
   saveModify(keyboard: Keyboard) {
     this.dataService.modifyKeyboard(keyboard).subscribe({
       next: (data: Keyboard) => {
-        const index = this.keyboards.findIndex((k) => k.name === data.name);
+        const index = this.keyboards.findIndex((k) => k.id === data.id);
         this.keyboards[index] = data;
         this.modify = undefined;
       },
@@ -78,7 +80,7 @@ export class AppComponent {
   deleteKeyboard(keyboard: Keyboard) {
     this.dataService.deleteKeyboard(keyboard).subscribe({
       next: () => {
-        const index = this.keyboards.findIndex((k) => k.name === keyboard.name);
+        const index = this.keyboards.findIndex((k) => k.id === keyboard.id);
         this.keyboards.splice(index, 1);
       },
       error: (err) => {

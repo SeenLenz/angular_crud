@@ -14,20 +14,26 @@
       <th>Backlight</th>
       <th>Keycap Brand</th>
     </tr>
-    <tr *ngFor="let keyboard of keyboards; let i = index; trackBy: i">
-      <td>
-        <span (click)="modifyKeyboard(keyboard)">&#9998;</span>
-        <span (click)="deleteKeyboard(keyboard)">&#10008;</span>
-      </td>
-      <td>{{ keyboard.name }}</td>
-      <td>{{ keyboard.switchType }}</td>
-      <td>{{ keyboard.caseType }}</td>
-      <td>{{ keyboard.pcbType }}</td>
-      <td>{{ keyboard.keyboardType }}</td>
-      <td>{{ keyboard.ergonomic ? 'Yes' : 'No' }}</td>
-      <td>{{ keyboard.backlight }}</td>
-      <td>{{ keyboard.keycaps.brand }}</td>
-    </tr>
+    @for (keyboard of keyboards; track keyboard.name) {
+      <tr>
+        <td>
+          <span (click)="modifyKeyboard(keyboard)">&#9998;</span>
+          <span (click)="deleteKeyboard(keyboard)">&#10008;</span>
+        </td>
+        <td>{{ keyboard.name }}</td>
+        <td>{{ keyboard.switchType }}</td>
+        <td>{{ keyboard.caseType }}</td>
+        <td>{{ keyboard.pcbType }}</td>
+        <td>{{ keyboard.keyboardType }}</td>
+        <td>{{ keyboard.ergonomic ? 'Yes' : 'No' }}</td>
+        <td>{{ keyboard.backlight }}</td>
+        <td>{{ keyboard.keycaps.brand }}</td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="9">There are no keyboards.</td>
+      </tr>
+    }
   </table>
 </div>
 
