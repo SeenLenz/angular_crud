@@ -1,0 +1,126 @@
+@if (model) {
+    <div class="modal" tabindex="-1" style="display: block;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Keyboard</h5>
+            <button type="button" class="btn-close" (click)="model = undefined"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Keyboard Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  [value]="model.name"
+                  (change)="model.name = getValue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="switchType" class="form-label">Switch Type</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="switchType"
+                  [value]="model.switchType"
+                  (change)="model.switchType = getValue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="caseType" class="form-label">Case Type</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="caseType"
+                  [value]="model.caseType"
+                  (change)="model.caseType = getValue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="pcbType" class="form-label">PCB Type</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pcbType"
+                  [value]="model.pcbType"
+                  (change)="model.pcbType = getValue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="keyboardType" class="form-label">Keyboard Type</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="keyboardType"
+                  [value]="model.keyboardType"
+                  (change)="model.keyboardType = getValue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="ergonomic" class="form-label">Ergonomic</label>
+                <select
+                  class="form-control"
+                  id="ergonomic"
+                  [value]="model.ergonomic"
+                  (change)="model.ergonomic = getBooleanValue($event)"
+                >
+                  <option [value]="true">Yes</option>
+                  <option [value]="false">No</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="backlight" class="form-label">Backlight</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="backlight"
+                  [value]="model.backlight"
+                  (change)="model.backlight = getValue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <h6>Keycaps</h6>
+                <div class="mb-2">
+                  <label for="keycapBrand" class="form-label">Brand</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="keycapBrand"
+                    [value]="model.keycaps?.brand"
+                    (change)="model.keycaps.brand = getValue($event)"
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="keycapMaterial" class="form-label">Material</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="keycapMaterial"
+                    [value]="model.keycaps?.material"
+                    (change)="model.keycaps.material = getValue($event)"
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="keycapProcess" class="form-label">Process</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="keycapProcess"
+                    [value]="model.keycaps?.process"
+                    (change)="model.keycaps.process = getValue($event)"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" (click)="model = undefined">Cancel</button>
+            <button type="button" class="btn btn-success" (click)="save()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+    
